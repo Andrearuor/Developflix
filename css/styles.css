@@ -16,3 +16,65 @@ h2 {
 }
 
 
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #111;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Contenedor de cada sección de género */
+.genero-container {
+    margin-bottom: 40px;
+}
+
+.genero-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Contenedor de las películas (diseño en cuadrícula flexible o scroll horizontal) */
+.genero {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Permite deslizar horizontalmente si hay muchas películas */
+    padding-bottom: 10px;
+}
+
+/* Estilo para cada tarjeta individual de película */
+.pelicula-card {
+    flex: 0 0 140px; /* Ancho fijo para cada tarjeta, ajusta según prefieras */
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+/* Estilo de la imagen del póster */
+.pelicula-card img {
+    width: 100%;
+    height: 210px; /* Mantiene la proporción vertical típica de un póster */
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título de la película debajo de la imagen */
+.pelicula-card h3 {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: #333;
+    line-height: 1.2;
+    /* Opcional: si quieres limitar el título a 2 líneas para que no se descuadre */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
